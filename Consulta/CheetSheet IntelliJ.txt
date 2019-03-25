@@ -1,0 +1,3 @@
+sout = Printa System.out.println();
+
+criar parametros - selecionar tudo - refactor - encapsulate fields
