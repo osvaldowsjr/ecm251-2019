@@ -6,7 +6,11 @@ public class Produto {
     private String nome;
 
 
-    public Produto(double preco, long id, String nome){}
+    public Produto(double preco, long id, String nome){
+        this.preco = preco;
+        this.id = id;
+        this.nome = nome;
+    }
 
     public void PegarInfo(){
         System.out.println("Nome: " + getNome() + "\n" + "Preço: " + getPreco() + "\n" + "Id" + getId()+ "\n");

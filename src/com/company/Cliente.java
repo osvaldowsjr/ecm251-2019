@@ -1,12 +1,28 @@
 package com.company;
 
+import java.util.Random;
+
 public class Cliente {
     private String nome;
     private String RA;
-    private String Funcionario;
-    private String Visitante;
+    private boolean Visitante;
+    private boolean Funcionario;
 
-    public Cliente (String nome){}
+    public Cliente (String nome){
+        this.nome = nome;
+        this.Visitante = true;
+    } //Visitante
+    public Cliente (String nome, boolean funcionario){
+        this.nome = nome;
+        if (funcionario)
+            this.Funcionario = true;
+        else
+            this.Visitante = true;
+    }// Visitante e funcionario
+    public Cliente (String nome,String ra){
+        this.nome = nome;
+        this.RA = ra;
+    } //Aluno
 
     public static void Comprar(){
 
@@ -14,29 +30,16 @@ public class Cliente {
     public static void Acompanhar(){
 
     }
-
     public String getNome() {
         return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
     }
     public String getRA() {
         return RA;
     }
-    public void setRA(String RA) {
-        this.RA = RA;
-    }
-    public String getFuncionario() {
-        return Funcionario;
-    }
-    public void setFuncionario(String funcionario) {
-        Funcionario = funcionario;
-    }
-    public String getVisitante() {
+    public boolean isVisitante() {
         return Visitante;
     }
-    public void setVisitante(String visitante) {
-        Visitante = visitante;
+    public boolean isFuncionario() {
+        return Funcionario;
     }
 }

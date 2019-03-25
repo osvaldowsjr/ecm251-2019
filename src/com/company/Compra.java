@@ -1,18 +1,22 @@
 package com.company;
 
 public class Compra {
-    private long id;
+    private int id;
     private Cliente cliente;
     private Produto produto;
 
-    public Compra (long id, Cliente cliente, Produto produto){}
+    public Compra (int id, Cliente cliente, Produto produto){
+        this.cliente = cliente;
+        this.produto = produto;
+        this.id = id;
+    }
 
     public void PegarInfo(){
-        System.out.println("Cliente: " + getCliente() + "\n" + "Produto: " + getProduto() + "\n" + "Id" + getId()+ "\n");
+        System.out.println("Cliente: " + cliente.getNome() + "\n" + "Produto: " + produto.getNome() + "\n" + "Id: " + getId()+ "\n");
     }
 
 
-    public long getId() {
+    public int getId() {
         return id;
     }
     public Cliente getCliente() {
