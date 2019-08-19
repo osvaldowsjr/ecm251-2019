@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="5" prefHeight="203.0" prefWidth="246.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TextField fx:id="txtFirst" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <Label text="Primeiro operando" />
+      <Label text="Segundo operando" GridPane.rowIndex="2" />
+      <TextField fx:id="txtSecond" GridPane.rowIndex="3" />
+      <HBox prefHeight="34.0" prefWidth="228.0" GridPane.rowIndex="4">
+         <children>
+            <Label text="Resultado">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="lblResult" alignment="CENTER" prefWidth="100.0" text="0.0" textAlignment="CENTER" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="228.0" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="Plus" mnemonicParsing="false" onAction="#sum" text="+">
+               <HBox.margin>
+                  <Insets left="40.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="Minus" mnemonicParsing="false" onAction="#Sub" text="-">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="Multiply" mnemonicParsing="false" onAction="#Mult" text="*">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="Divide" mnemonicParsing="false" onAction="#Divd" text="/">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </children>
+</GridPane>
